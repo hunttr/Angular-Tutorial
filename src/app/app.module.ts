@@ -13,6 +13,8 @@ import { PersonalComponent }  from './personal/personal.component';
 import { WorkComponent }      from './work/work.component';
 import { AddressComponent }   from './address/address.component';
 import { ResultComponent }    from './result/result.component';
+import { AttributeComponent } from './attribute/attribute.component';
+import { NumberSpinnerComponent } from './shared/number-spinner.component';
 
 /* App Router */
 import { UIRouterConfigFn }   from "./app.router";
@@ -23,7 +25,7 @@ import { CharacterDataService }    from './data/characterData.service'
 
 @NgModule({
   declarations: [
-    AppComponent, NavbarComponent, PersonalComponent, WorkComponent, AddressComponent, ResultComponent 
+    AppComponent, NavbarComponent, PersonalComponent, WorkComponent, AddressComponent, ResultComponent, AttributeComponent, NumberSpinnerComponent
   ],
   imports: [
     BrowserModule,
