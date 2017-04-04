@@ -2,6 +2,7 @@ import { Component, OnInit, Input, OnDestroy } from '@angular/core';
  
 import { CharacterData } from '../data/characterData.model';
 import { CharacterDataService } from '../data/characterData.service';
+import { Attributes } from '../data/attributeData.model';
 
 @Component({
     moduleId: module.id,
@@ -15,14 +16,37 @@ export class AttributeComponent implements OnInit, OnDestroy {
     }
  
     ngOnInit() {
-        //this.characterDataService.getData().subscribe(character => this.characterData = character);
         this.characterData = this.characterDataService.getData();
-        console.log('Personal feature loaded!');
+        console.log('Attribute feature loaded!');
     }
  
     ngOnDestroy() {
         this.characterDataService.setData(this.characterData);
         console.log(this.title + ' unloaded!');
+    }
+
+    setStr(value: number){
+        this.characterData.strength = value;
+    }
+
+    setDex(value: number){
+        this.characterData.dexterity = value;
+    }
+
+    setCon(value: number){
+        this.characterData.constitution = value;
+    }
+
+    setInt(value: number){
+        this.characterData.intelligence = value;
+    }
+
+    setWis(value: number){
+        this.characterData.wisdom = value;
+    }
+
+    setCha(value: number){
+        this.characterData.charisma = value;
     }
 
 }

@@ -6,3 +6,7 @@
     -webkit-touch-callout: none;
     -webkit-user-select: none;
 }
+
+.ui-spinner-input {
+    width: 20px;
+}

@@ -3,46 +3,23 @@
     <br/>
     <div class='row'>
         <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
-            <div class="row">
-                <div class='col-xs-12 col-sm-6'>
-                    <div class="form-group">
-                        <label class="control-label" for="firstname">First Name</label>  
-                        <input class="form-control input-md" id="firstname" name="firstname" type="text" placeholder="First Name" [(ngModel)]="characterData.firstName">   
-                    </div>
-                </div>
-                <div class='col-xs-12 col-sm-6'>
-                    <div class="form-group">
-                        <label class="control-label" for="lastname">Last Name</label>  
-                        <input class="form-control input-md" id="lastname" name="lastname" type="text" placeholder="Last Name" [(ngModel)]="characterData.lastName">
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label" for="email">Email</label>
-                <input class="form-control input-md" id="email" name="email" type="text" placeholder="Email" [(ngModel)]="characterData.email">
-            </div>
- 
-            <div class="form-group text-center space-20">
-                <a uiSref="personal" class="btn btn-outline-rounded btn-default"> <span style="margin-right:10px;" class="glyphicon glyphicon-arrow-left"></span> Previous</a>
-                <a uiSref="work" class="btn btn-outline-rounded btn-info"> Next <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></a>
-            </div>
+                <number-spinner [number]='characterData.strength' [attributeName]="'STR'" (spinnerClicked)='setStr($event)'></number-spinner>
         </div>
         <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
-            <div class="form-group">
-                <label class="control-label" for="strength">STR</label>
-                <number-spinner [attributename]="'strength'"></number-spinner>
-                <label class="control-label" for="strength">DEX</label>
-                <number-spinner [attributename]="'dexterity'"></number-spinner>
-                <label class="control-label" for="strength">CON</label>
-                <number-spinner [attributename]="'constitution'"></number-spinner>
-                <label class="control-label" for="strength">INT</label>
-                <number-spinner [attributename]="'intelligence'"></number-spinner>
-                <label class="control-label" for="strength">WIS</label>
-                <number-spinner [attributename]="'wisdom'"></number-spinner>
-                <label class="control-label" for="strength">CHA</label>
-                <number-spinner [attributename]="'charisma'"></number-spinner>
+                <number-spinner [number]='characterData.dexterity' [attributeName]="'DEX'" (spinnerClicked)='setDex($event)'></number-spinner>
+        </div>
+        <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
+                <number-spinner [number]='characterData.constitution' [attributeName]="'CON'" (spinnerClicked)='setCon($event)'></number-spinner>
+        </div>
+        <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
+                <number-spinner [number]='characterData.intelligence' [attributeName]="'INT'" (spinnerClicked)='setInt($event)'></number-spinner>
+        </div>
+        <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
+                <number-spinner [number]='characterData.wisdom' [attributeName]="'WIS'" (spinnerClicked)='setWis($event)'></number-spinner>
+        </div>
+        <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
+                <number-spinner [number]='characterData.charisma' [attributeName]="'CHA'" (spinnerClicked)='setCha($event)'></number-spinner>
                 <!--input class="form-control input-md attribute" id="strength" name="strength" type="number" maxlength="2" [(ngModel)]="characterData.strength"-->
-            </div>
         </div>
     </div>
 </div>

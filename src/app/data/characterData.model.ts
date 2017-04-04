@@ -20,12 +20,12 @@ export class CharacterData {
     age: number = 0;
     height: number = 0;
     weight: number = 0;
-    strength: number = 0;
-    dexterity: number = 0;
-    constitution: number = 0;
-    intelligence: number = 0;
-    wisdom: number = 0;
-    charisma: number = 0;
+    strength: number = 10;
+    dexterity: number = 10;
+    constitution: number = 10;
+    intelligence: number = 10;
+    wisdom: number = 10;
+    charisma: number = 10;
     skills: SkillData[] = new Array();
     feats: FeatData[] = new Array();
 }
