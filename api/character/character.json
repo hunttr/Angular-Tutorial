@@ -1,0 +1,34 @@
+[
+    {
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "work": "Code",
+        "street": "",
+        "city": "",
+        "state": "",
+        "zip": "",
+        "id": 1,
+        "characterName": "Argen Timson",
+        "alignment": "NG",
+        "deity": "Caiden Caillen",
+        "race": "Human",
+        "size": "Medium",
+        "gender": "M",
+        "age": 35,
+        "height": 189,
+        "weight": 210,
+        "strength": 14,
+        "dexterity": 18,
+        "constitution": 12,
+        "intelligence": 12,
+        "wisdom": 8,
+        "charisma": 14,
+        "skills": [
+            { "id": 1, "name": "Acrobatics", "rank": 2 }
+        ],
+        "feats": [
+            { "id": 1, "name": "Acrobatic" }
+        ]
+    }
+]
