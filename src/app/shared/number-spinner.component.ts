@@ -13,11 +13,17 @@ export class NumberSpinnerComponent {
     @Output() spinnerClicked: EventEmitter<number> = new EventEmitter<number>();
 
     increase(){
-        this.spinnerClicked.emit(++this.number);
+        if(++this.number <= 18)
+            this.spinnerClicked.emit(this.number);
+        else
+            this.number = 18;
     }
 
     decrease() {
-        this.spinnerClicked.emit(--this.number);
+        if(--this.number >= 7)
+            this.spinnerClicked.emit(this.number);
+        else    
+            this.number = 7;
     }
 
     setValue() {

@@ -3,28 +3,60 @@
     <br/>
     <div class='row'>
         <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
-                <input type="radio" name="attributeselectiontype" value="manual">Manual<br>
-                <input type="radio" name="attributeselectiontype" value="pointbuy">Point Buy
-        </div>
-    </div>
-    <div class='row'>
-        <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 text-right'>
-                <number-spinner [number]='characterData.strength' [attributeName]="'STR'" (spinnerClicked)='setStr($event)'></number-spinner>
-        </div>
-        <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 text-right'>
-                <number-spinner [number]='characterData.dexterity' [attributeName]="'DEX'" (spinnerClicked)='setDex($event)'></number-spinner>
-        </div>
-        <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 text-right'>
-                <number-spinner [number]='characterData.constitution' [attributeName]="'CON'" (spinnerClicked)='setCon($event)'></number-spinner>
-        </div>
-        <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 text-right'>
-                <number-spinner [number]='characterData.intelligence' [attributeName]="'INT'" (spinnerClicked)='setInt($event)'></number-spinner>
-        </div>
-        <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 text-right'>
-                <number-spinner [number]='characterData.wisdom' [attributeName]="'WIS'" (spinnerClicked)='setWis($event)'></number-spinner>
-        </div>
-        <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 text-right'>
-                <number-spinner [number]='characterData.charisma' [attributeName]="'CHA'" (spinnerClicked)='setCha($event)'></number-spinner>
+                <div class='row'>
+                        <div class='col-xs-12 col-sm-6'>
+                        </div>
+                        <div class='col-xs-12 col-sm-6 text-right'>
+                                <label class="control-label" *ngIf='showPoints'>{{remainingPoints}} points remaining</label>
+                        </div>
+                </div>
+                <div class='row'>
+                        <div class='col-xs-12 col-sm-6'>
+                                <input type="radio" name="attributeselectiontype" value="manual" [(ngModel)]='attributeSelectionType' (change)='showPointTotal()' checked>Manual
+                        </div>
+                        <div class='col-xs-12 col-sm-6 text-right'>
+                                <number-spinner [number]='characterData.strength' [attributeName]="'STR'" (spinnerClicked)='setStr($event)'></number-spinner>
+                        </div>
+                </div>
+                <div class='row'>
+                        <div class='col-xs-12 col-sm-6'>
+                                <input type="radio" name="attributeselectiontype" value="low" [(ngModel)]='attributeSelectionType' (change)='showPointTotal()'>Point Buy (Low Power - 10 pts)
+                        </div>
+                        <div class='col-xs-12 col-sm-6 text-right'>
+                                <number-spinner [number]='characterData.dexterity' [attributeName]="'DEX'" (spinnerClicked)='setDex($event)'></number-spinner>
+                        </div>
+                </div>
+                <div class='row'>
+                        <div class='col-xs-12 col-sm-6'>
+                                <input type="radio" name="attributeselectiontype" value="standard" [(ngModel)]='attributeSelectionType' (change)='showPointTotal()'>Point Buy (Standard Fantasy - 15 pts)
+                        </div>
+                        <div class='col-xs-12 col-sm-6 text-right'>
+                                <number-spinner [number]='characterData.constitution' [attributeName]="'CON'" (spinnerClicked)='setCon($event)'></number-spinner>
+                        </div>
+                </div>
+                <div class='row'>
+                        <div class='col-xs-12 col-sm-6'>
+                                <input type="radio" name="attributeselectiontype" value="high" [(ngModel)]='attributeSelectionType' (change)='showPointTotal()'>Point Buy (High Fantasy - 20 pts)
+                        </div>
+                        <div class='col-xs-12 col-sm-6 text-right'>
+                                <number-spinner [number]='characterData.intelligence' [attributeName]="'INT'" (spinnerClicked)='setInt($event)'></number-spinner>
+                        </div>
+                </div>
+                <div class='row'>
+                        <div class='col-xs-12 col-sm-6'>
+                                <input type="radio" name="attributeselectiontype" value="epic" [(ngModel)]='attributeSelectionType' (change)='showPointTotal()'>Point Buy (Epic Fantasy - 25 pts)
+                        </div>
+                        <div class='col-xs-12 col-sm-6 text-right'>
+                                <number-spinner [number]='characterData.wisdom' [attributeName]="'WIS'" (spinnerClicked)='setWis($event)'></number-spinner>
+                        </div>
+                </div>
+                <div class='row'>
+                        <div class='col-xs-12 col-sm-6'>
+                        </div>
+                        <div class='col-xs-12 col-sm-6 text-right'>
+                                <number-spinner [number]='characterData.charisma' [attributeName]="'CHA'" (spinnerClicked)='setCha($event)'></number-spinner>
+                        </div>
+                </div>
         </div>
     </div>
 </div>
