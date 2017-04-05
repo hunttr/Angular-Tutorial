@@ -2,7 +2,7 @@
     <div class="form-horizontal">
         <h4 class="head text-center">{{title}}</h4>
         <br/>
-        <div class='row'>
+        <!--div class='row'>
             <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
                 <div class="form-group">
                     <label class="control-label" for="street">Street Address</label>  
@@ -29,8 +29,11 @@
                     </div> 
                 </div>
             </div>
+        </div-->
+        <div class='row'>
+     	    <dual-list [sort]="keepSorted" [source]="source" [key]='key' [display]="display" [filter]="filter" [(destination)]="confirmed" height="200px"></dual-list>
         </div>
- 
+
         <div class="form-group text-center">
             <a uiSref="work" class="btn btn-outline-rounded btn-default"> <span style="margin-right:10px;" class="glyphicon glyphicon-arrow-left"></span> Previous</a>
             <a uiSref="result" class="btn btn-outline-rounded btn-info"> Next <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></a>
