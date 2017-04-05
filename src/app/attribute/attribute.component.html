@@ -3,23 +3,28 @@
     <br/>
     <div class='row'>
         <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
+                <input type="radio" name="attributeselectiontype" value="manual">Manual<br>
+                <input type="radio" name="attributeselectiontype" value="pointbuy">Point Buy
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 text-right'>
                 <number-spinner [number]='characterData.strength' [attributeName]="'STR'" (spinnerClicked)='setStr($event)'></number-spinner>
         </div>
-        <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
+        <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 text-right'>
                 <number-spinner [number]='characterData.dexterity' [attributeName]="'DEX'" (spinnerClicked)='setDex($event)'></number-spinner>
         </div>
-        <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
+        <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 text-right'>
                 <number-spinner [number]='characterData.constitution' [attributeName]="'CON'" (spinnerClicked)='setCon($event)'></number-spinner>
         </div>
-        <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
+        <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 text-right'>
                 <number-spinner [number]='characterData.intelligence' [attributeName]="'INT'" (spinnerClicked)='setInt($event)'></number-spinner>
         </div>
-        <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
+        <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 text-right'>
                 <number-spinner [number]='characterData.wisdom' [attributeName]="'WIS'" (spinnerClicked)='setWis($event)'></number-spinner>
         </div>
-        <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
+        <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 text-right'>
                 <number-spinner [number]='characterData.charisma' [attributeName]="'CHA'" (spinnerClicked)='setCha($event)'></number-spinner>
-                <!--input class="form-control input-md attribute" id="strength" name="strength" type="number" maxlength="2" [(ngModel)]="characterData.strength"-->
         </div>
     </div>
 </div>

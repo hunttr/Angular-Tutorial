@@ -19,4 +19,8 @@ export class NumberSpinnerComponent {
     decrease() {
         this.spinnerClicked.emit(--this.number);
     }
+
+    setValue() {
+        this.spinnerClicked.emit(this.number);
+    }
 }

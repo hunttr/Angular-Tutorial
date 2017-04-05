@@ -2,7 +2,6 @@ import { Component, OnInit, Input, OnDestroy } from '@angular/core';
  
 import { CharacterData } from '../data/characterData.model';
 import { CharacterDataService } from '../data/characterData.service';
-import { Attributes } from '../data/attributeData.model';
 
 @Component({
     moduleId: module.id,
