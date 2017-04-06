@@ -1,5 +1,7 @@
 <div class="feat-container">
-    <li *ngFor='let feat of featData'>
-        {{feat.name}}
-    </li>
+    <select name="feats" [size]='featData.length'>
+        <option *ngFor='let feat of featData'>
+            {{feat.name}}
+        </option>
+    </select>
 </div>

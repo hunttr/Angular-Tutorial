@@ -17,6 +17,6 @@ export class FeatContainerComponent implements OnInit {
     constructor(private featDataService: FeatDataService) {}
 
     ngOnInit() {
-        this.featData = [this.featDataService.getData(), this.featDataService.getData()];
+        this.featData = [this.featDataService.getData(), this.featDataService.getData(), this.featDataService.getData(), this.featDataService.getData(), this.featDataService.getData(), this.featDataService.getData(), this.featDataService.getData()];
     }
 }
