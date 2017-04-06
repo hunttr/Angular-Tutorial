@@ -16,6 +16,7 @@ import { ResultComponent }    from './result/result.component';
 import { AttributeComponent } from './attribute/attribute.component';
 import { NumberSpinnerComponent } from './shared/number-spinner.component';
 import { DualListComponent } from './shared/dual-list.component';
+import { FeatContainerComponent } from './shared/feat-container.component';
 
 /* App Router */
 import { UIRouterConfigFn }   from "./app.router";
@@ -27,7 +28,8 @@ import { FeatDataService } from './data/featData.service';
 
 @NgModule({
   declarations: [
-    AppComponent, NavbarComponent, PersonalComponent, WorkComponent, AddressComponent, ResultComponent, AttributeComponent, NumberSpinnerComponent, DualListComponent
+    AppComponent, NavbarComponent, PersonalComponent, WorkComponent, AddressComponent, ResultComponent, AttributeComponent, NumberSpinnerComponent, DualListComponent,
+    FeatContainerComponent
   ],
   imports: [
     BrowserModule,
